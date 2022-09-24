@@ -186,13 +186,15 @@ button:active {
     margin: -1% auto 20px auto;
     position: relative;
     display: flex;
+    align-items:center;
+    justify-content: space-between;
     gap: 15px;
 
 }
 
 .box-1,.box-2,.box-3,.box-4,.box-5 {
-    width: 300px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     background-color: var(--second-color);
     background-image: url(/MyOwnWebsite/assets/imgs/bg2-r.jpg);
     background-repeat: no-repeat;
@@ -203,6 +205,11 @@ button:active {
     padding: 25px;
 }
 
+.flip-box-back img {
+    width: 100%;
+    height: 100%;
+}
+
 .skills-container p {
     font-family: 'Prompt', sans-serif;
     font-weight: bold;
@@ -211,11 +218,13 @@ button:active {
     text-align: center;
 }
 
-.box-1:hover,.box-2:hover,.box-3:hover,.box-4:hover,.box-5:hover {
+/* .box-1:hover,.box-2:hover,.box-3:hover,.box-4:hover,.box-5:hover {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     transform: rotateX(180deg);
-}
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+} */
 
 
 
@@ -234,28 +243,50 @@ nav ul li a {
     margin: 0.5rem;
     
 }
-    
+.full-container {
+    height: 100%;
+    width: 100%;
+
+}
     .skills-container {
+        height: 100vh;
+        width: 60%;
         flex-direction: column;
+        align-items: center;
         margin: 2% 15%;
         padding: 0px;
-        overflow-x: hidden;
+        position: relative;
+        background-image: none;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        box-shadow: none;
     }
+
+    .box-1,.box-2,.box-3,.box-4,.box-5 {
+        /* position: absolute; */
+        height: 100%;
+        width: 100%;
+
+}
+
 }
 
 
 
 
 /* animation : */
- .flip-box {
+
+/* flip box */
+
+.flip-box {
     background-color: transparent;
     width: 300px;
     height: 200px;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
   }
-
-.flip-box-inner {
+  
+  .flip-box-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -282,7 +313,8 @@ nav ul li a {
   }
   
   .flip-box-back {
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
     color: white;
     transform: rotateX(180deg);
-  } 
+  }
+
