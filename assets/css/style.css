@@ -219,25 +219,35 @@ button:active {
 
 
 
+/* Media qureies  */
+@media (max-width:1000px) {
+  nav {
+    /* overflow-x: hidden; */
+    flex-direction: column;
+    justify-content:center;
+    align-content:center;
+    font-size: 5px;
+    
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
+nav ul li a {
+    margin: 0.5rem;
+    
+}
+    
+    .skills-container {
+        flex-direction: column;
+        margin: 2% 15%;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+}
 
 
 
 
 /* animation : */
-/* .flip-box {
+ .flip-box {
     background-color: transparent;
     width: 300px;
     height: 200px;
@@ -275,4 +285,4 @@ button:active {
     background-color: dodgerblue;
     color: white;
     transform: rotateX(180deg);
-  } */
+  } 
